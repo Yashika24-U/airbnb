@@ -11,7 +11,7 @@ export default[
         reviewCount : 12
     },
     location:"Online",
-    openSpots:23,
+    openSpots:0,
 },
 {
     id:2,
@@ -23,7 +23,7 @@ export default[
         rating:5.0,
         reviewCount : 30
     },
-    location:"Online",
+    location:"Offline",
     openSpots:27,
  },
 {
@@ -31,7 +31,7 @@ export default[
     title:"Group Mountain Biking",
     description: "Muriwai horse trekking (2 hours) along the unique black sand beach - yes horse trekking can build your team'semotional awareness, leadership skills, and relationship building!On your way to the horse trekking take in the majestic views of the rugged West Coast shoreline including the Muriwai gannet colony in flight.",
     price:50,
-    coverImg:"mountain-bike 1.png",
+    coverImg:"mountain-bike 2.png",
     stats:{
         rating:5.0,
         reviewCount : 30

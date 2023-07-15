@@ -16,20 +16,29 @@ import star1 from "../Star 1.png"
 
 export default function Card(props)
 {
-  console.log(props)
-    return(
-      <div className = "card">
-          <img src= {require(`../images/${props.img}`)}alt = " " className = "card--image" /> 
-           <div className = "card--stats">
+  let cardtext
+  if(props.openSpots === 0)
+    cardtext = "SOLD OUT"
+  else if(props.location === "Online")
+    cardtext = "ONLINE"
+ console.log(props)
+  return(
+  <div className="cards">   
+  <div className = "card">
+      {cardtext &&<div className="card--badge">{cardtext}</div>}
+         
+          <img src= {require(`../images/${props.ele.coverImg}`)} alt = " " className ="card--image" /> 
+          <div className = "card--stats">
               <img className = "card--star" src = {star1}/>
-              <span>{props.rating}</span>
-              <span className="grey">{props.reviewCount}</span>
+              <span>{props.ele.stats.rating}</span>
+              <span className="grey">{props.ele.stats.reviewCount}</span>
               <span className="grey">.</span>
-              <span  className="grey">{props.location}</span>
+              <span  className="grey">{props.ele.location}</span>
           </div>
-          <p>{props.title}</p>
-          <p><span className = "bold">{props.price}</span>/person</p>
-
-      </div>  
+          <p className="card--title">{props.ele.title}</p>
+          <p><span className = "bold">{props.ele.price}</span>/person</p>
+      </div>   
+      </div>        
+      
     )
 }
